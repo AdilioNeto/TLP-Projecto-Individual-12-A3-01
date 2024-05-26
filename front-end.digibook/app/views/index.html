@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Digibook - Início</title>
+    
+    <link rel="shortcut icon" href="../../public/assets/favicon/logo.png" type="image/x-icon">
+
+    <!--Style - Start-->
+    <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="../../public/css/livro.css">
+    <!--Style - End-->
+
+    <!--Font - Start-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <!--Font - end-->
+    
+    <!--JS - Start-->
+    <script defer src="../../public/js/main.js"></script>
+    <script defer src="../../public/js/back_button.js"></script>
+    <script defer src="../../public/js/httpRequests/users.js"></script>
+    <!--JS - End-->
+
+</head>
+<body>
+
+    <div id="filter">
+        <header>
+            <div id="logo"><a href="#about_us_section">
+                <img width="20" height="20" src="../../public/assets/favicon/logo.png" alt="">Digibook</a>
+            </div>
+            <nav>
+                <div id="search_container">
+                    <div id="search_icon">
+                        <img width="25" src="../../public/assets/icons/search_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                    </div>
+                    <input id="search" type="text" name="pesquisa" placeholder="Pesquisar">
+                    <div class="search_results">
+                        <p>Nada ainda foi Encontrado...</p>
+                    </div>
+                </div>
+
+                <ul type="none" id="menu">
+
+
+                    <li class="menu_li">
+                        <a href=".">CLASSES</a>
+                        <div></div>
+                        <ul type="none" class="dropdown">
+                            <span>
+                                <li class="menu_li">
+                                    <a href="decima/index.html">10ª Classe</a>
+                                    <div></div>
+                                </li>
+                                <li class="menu_li">
+                                    <a href="decima_1/index.html">11ª Classe</a>
+                                    <div></div>
+                                </li>
+                                <li class="menu_li">
+                                    <a href="decima_2/index.html">12ª Classe</a>
+                                    <div></div>
+                                </li>
+                            </span>
+                        </ul>
+                    </li>
+
+                    <div id="session_area">
+                        <div id="before">
+                            <li><a onclick="changeBackPageLocation('../index.html')" id="login" href="login/index.html">Login</a></li>
+                            <li><a onclick="changeBackPageLocation('../index.html')" id="cadastro" href="cadastro/index.html">Cadastro</a></li>
+                        </div>
+                        <div id="after">
+                            <p>A</p>
+                        </div>
+                    </div>                               
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="intro_section">
+                <div id="intro">
+                    <h1>Bem-vindo à DigiBook</h1>
+                    <p>Sua Plataforma Digital para Livros Escolares!</p>
+                </div>
+                <img id="wave" src="../../public/assets/wave.png" alt="">            
+            </section>
+            <section id="vantages_section">
+                <div class="container">
+                    <h1>Por Que Escolher a DigiBook?</h1>
+                    <div class="row" >
+                        <div class="row_2">
+                            <div class="card_book">
+                                <div class="icon_container">
+                                    <img src="../../public/assets/icons/accessibility_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                                </div>
+                                <p class="verde">Acessibilidade</p>
+                                <p>Com a DigiBook, os alunos podem acessar seus livros escolares a qualquer momento, em qualquer lugar, usando dispositivos como computadores, tablets ou smartphones.</p>
+                            </div>
+                            <div class="card_book">
+                                <div class="icon_container">
+                                    <img src="../../public/assets/icons/diversity_3_FILL0_wght400_GRAD0_opsz20.png" alt="">
+                                </div>
+                                <p class="verde">Variedade</p>
+                                <p> Oferecemos uma ampla gama de livros escolares, abrangendo todas as disciplinas e níveis de ensino, desde o jardim de infância até o ensino médio e universitário.</p>
+                            </div>
+                        </div>
+                        <div class="row_2">
+                            <div class="card_book">
+                                <div class="icon_container">
+                                    <img src="../../public/assets/icons/interactive_space_FILL0_wght400_GRAD0_opsz20.png" alt="">
+                                </div>
+                                <p class="verde">Interatividade</p>
+                               <p> Além dos livros em formato digital, muitos de nossos títulos incluem recursos interativos, como vídeos, animações, questionários e atividades práticas. </p>
+                            </div>
+                            <div class="card_book">
+                                <div class="icon_container">
+                                    <img src="../../public/assets/icons/payments_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                                </div>
+                                <p class="verde">Economia</p>
+                                <p> Os livros digitais da DigiBook geralmente são mais acessíveis do que suas contrapartes impressas, permitindo que os alunos economizem dinheiro em seus materiais escolares.</p>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <section id="amostra_section">
+                <div class="container">
+                    <h1>Livros Diponíveis</h1>
+                    <div class="lib_row_prin">
+                        <div class="lib_row_sec">
+                            <div class="lib_card">
+                                <div class="img_container">
+                                    <img src="../../public/assets/books/1.jpg" alt="">
+                                </div>
+                                <div class="alert">
+                                    <button onclick="openDetails('Empreendedorismo-10ª-Classe', true)">Detalhes</button>
+                                </div>
+                                <div class="subtitle">Empreendedorismo 10ª Classe</div>
+                            </div>
+                            <div class="lib_card">
+                                <div class="img_container">
+                                    <img src="../../public/assets/books/2.jpg" alt="">
+                                </div>
+                                <div class="alert">
+                                    <button onclick="openDetails('Informática-10ª-Classe', true)">Detalhes</button>
+                                </div>
+                                <div class="subtitle">Informática 10ª Classe</div>
+                            </div>
+                        </div>
+                        <div class="lib_row_sec">
+                            <div class="lib_card">
+                                <div class="img_container">
+                                    <img src="../../public/assets/books/3.jpg" alt="">
+                                </div>
+                                <div class="alert">
+                                    <button onclick="openDetails('Empreendedorismo-12ª-Classe', true)">Detalhes</button>
+                                </div>
+                                <div class="subtitle">Empreendedorismo 12ª Classe</div>
+                            </div>
+                            <div class="lib_card">
+                                <div class="img_container">
+                                    <img src="../../public/assets/books/4.jpg" alt="">
+                                </div>
+                                <div class="alert">
+                                    <button onclick="openDetails('Empreendedorismo-11ª-Classe', true)">Detalhes</button>
+                                </div>
+                                <div class="subtitle">Empreendedorismo 11ª Classe</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lib_row_prin">
+                        <div class="lib_row_sec">
+                            <div class="lib_card">
+                                <div class="img_container">
+                                    <img src="../../public/assets/books/5.jpg" alt="">
+                                </div>
+                                <div class="alert">
+                                    <button onclick="openDetails('Física-10ª-Classe', true)">Detalhes</button>
+                                </div>
+                                <div class="subtitle">Física 10ª Classe</div>
+                            </div>
+                            <div class="lib_card">
+                                <div class="img_container">
+                                    <img src="../../public/assets/books/6.jpg" alt="">
+                                </div>
+                                <div class="alert">
+                                    <button onclick="openDetails('Matemática-12ª-Classe', true)">Detalhes</button>
+                                </div>
+                                <div class="subtitle">Matemática 12ª Classe</div>
+                            </div>
+                        </div>
+                        <div class="lib_row_sec">
+                            <div class="lib_card">
+                                <div class="img_container">
+                                    <img src="../../public/assets/books/7.jpg" alt="">
+                                </div>
+                                <div class="alert">
+                                    <button onclick="openDetails('Língua-Portuguesa 11ª-Classe', true)">Detalhes</button>
+                                </div>
+                                <div class="subtitle">Língua Portuguesa 11ª Classe</div>
+                            </div>
+                            <div class="lib_card">
+                                <div class="img_container">
+                                    <img src="../../public/assets/books/8.jpg" alt="">
+                                </div>
+                                <div class="alert">
+                                    <button onclick="openDetails('Língua-Portuguesa-12ª-Classe', true)">Detalhes</button>
+                                </div>
+                                <div class="subtitle">Língua Portuguesa 12ª Classe</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lib_row_prin">
+                        <div class="lib_row_sec">
+                            <div class="lib_card">
+                                <div class="img_container">
+                                    <img src="../../public/assets/books/9.jpg" alt="">
+                                </div>
+                                <div class="alert">
+                                    <button onclick="openDetails('Química-12ª-Classe', true)">Detalhes</button>
+                                </div>
+                                <div class="subtitle">Química 12ª Classe</div>
+                            </div>
+                            <div class="lib_card">
+                                <div class="img_container">
+                                    <img src="../../public/assets/books/10.jpg" alt="">
+                                </div>
+                                <div class="alert">
+                                    <button onclick="openDetails('Geologia-12ª-Classe', true)">Detalhes</button>
+                                </div>
+                                <div class="subtitle">Geologia 12ª Classe</div>
+                            </div>
+                        </div>
+                        <div class="lib_row_sec">
+                            <div class="lib_card">
+                                <div class="img_container">
+                                    <img src="../../public/assets/books/11.jpg" alt="">
+                                </div>
+                                <div class="alert">
+                                    <button onclick="openDetails('Geologia-11ª-Classe', true)">Detalhes</button>
+                                </div>
+                                <div class="subtitle">Geologia 11ª Classe</div>
+                            </div>
+                            <div class="lib_card">
+                                <div class="img_container">
+                                    <img src="../../public/assets/books/12.jpg" alt="">
+                                </div>
+                                <div class="alert">
+                                    <button onclick="openDetails('Física-12ª-Classe', true)">Detalhes</button>
+                                </div>
+                                <div class="subtitle">Física 12ª Classe</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="amostra_details_section">
+                <div class="container">
+                    <h1>Detalhes sobre os livros</h1>
+                    <p>A DigiBook disponibiliza libros escolares no formato digital para classes entre a 10ª e a 12ª de disciplinas diversas, sendo tudo de graça.</p>
+                    <div class="lib_row_prin">
+                        <div class="lib_row_sec">
+                            <div class="lib_card">
+                                <div class="img_container">
+                                    <img src="../../public/assets/books/2.jpg" alt="">
+                                </div>
+                                <div class="alert">
+                                    <button onclick="openDetails('Informática-10ª-Classe', true)">Detalhes</button>
+                                </div>
+                                <div class="subtitle">Informática 10ª Classe</div>
+                            </div>
+                            <div class="lib_card">
+                                <div class="img_container">
+                                    <img src="../../public/assets/books/7.jpg" alt="">
+                                </div>
+                                <div class="alert">
+                                    <button onclick="openDetails('Língua-Portuguesa-11ª-Classe', true)">Detalhes</button>
+                                </div>
+                                <div class="subtitle">Língua Portuguesa 11ª Classe</div>
+                            </div>
+                        </div>
+                        <div class="lib_row_sec">
+                            <div class="lib_card">
+                                <div class="img_container">
+                                    <img src="../../public/assets/books/6.jpg" alt="">
+                                </div>
+                                <div class="alert">
+                                    <button onclick="openDetails('Matemática-12ª-Classe', true)">Detalhes</button>
+                                </div>
+                                <div class="subtitle">Matemática 12ª Classe</div>
+                            </div>
+                            <div class="lib_card">
+                                <div class="img_container">
+                                    <img src="../../public/assets/books/5.jpg" alt="">
+                                </div>
+                                <div class="alert">
+                                    <button onclick="openDetails('Física-10ª-Classe', true)">Detalhes</button>
+                                </div>
+                                <div class="subtitle">Física 10ª Classe</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="about_us_section">
+                <div class="container">
+                    <h1>Sobre Nós</h1>
+                    <p class="intr_p">Na DigiBook, estamos comprometidos em fornecer uma experiência de aprendizado acessível, conveniente e de alta qualidade para estudantes, educadores e pais. Aqui está tudo o que você precisa saber sobre nós:</p><br><br>
+                    <h3>O Que é a DigiBook?</h3><br>
+                    <p>A DigiBook é uma plataforma online especializada na disponibilização de livros escolares no formato digital. Nosso objetivo é facilitar o acesso a materiais educacionais de alta qualidade, eliminando as barreiras físicas e financeiras associadas aos livros tradicionais.</p><br><br>
+                    <h3>Como Funciona?</h3><br>
+                    <ul type="none">
+                        <li>Navegação Simples: Nosso site foi projetado para ser intuitivo e fácil de usar. Os usuários podem navegar por categorias, disciplinas ou usar a função de pesquisa para encontrar os livros de que precisam.</li>
+                        <li>Compra Segura: Garantimos transações seguras e protegidas para todos os clientes. Aceitamos uma variedade de métodos de pagamento, tornando o processo de compra rápido e conveniente.
+                        </li>
+                        <li>Acesso Instantâneo: Após a conclusão da compra, os usuários têm acesso instantâneo aos seus livros digitais. Eles podem fazer o download para seus dispositivos ou acessá-los diretamente através de nossa plataforma online.
+                        </li>
+                        <li>Suporte ao Cliente: Nossa equipe de suporte ao cliente está sempre disponível para ajudar com quaisquer dúvidas ou problemas que os usuários possam ter. Estamos comprometidos em garantir uma experiência positiva para todos os nossos clientes.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="user_menu">
+                <div id="menu_container" class="hide_user_menu">
+                    <h2>Olá, Adílio!</h2>
+                    <ul type="none">
+                        <li id="perfil">Perfil</li>
+                        <ul class="user_submenu user_submenu_hidden perfil_menu" type="none">
+                            <li id="change_name_li">Alterar nome</li>
+                        </ul>
+                        <li id="def_Conta">Difinições Da Conta</li>
+                        <ul class="user_submenu user_submenu_hidden def_menu" type="none">
+                            <li id="change_password_li">Alterar senha</li>
+                            <li id="delete_user">Eliminar Conta</li>
+                        </ul>
+                        <li id="sign_out">Sair</li>
+                    </ul>
+                </div>
+
+            </section>
+            <section id="change_name" class="hide">
+                <form id="change_name_form">
+                    <div id="close_change_name">
+                        <img width="25" src="../../public/assets/icons/close_24dp_FILL0_wght400_GRAD0_opsz24 (1).png" alt="">
+                    </div>
+                    <legend>Alterar Nome</legend>
+                    <div class="form_alert hide">
+                        <p></p>
+                    </div>
+                    <label for="nome">Nome <br>
+                        <input type="text" name="nome" id="nome" required>
+                    </label><br>
+                    
+                    <button id="submit" type="submit">Entrar</button> 
+                    <button type="reset">Limpar</button>
+                </form>
+            </section>
+            <section id="change_passowrd" class="hide">
+                <form id="change_passowrd_form">
+                    <div id="close_change_password">
+                        <img width="25" src="../../public/assets/icons/close_24dp_FILL0_wght400_GRAD0_opsz24 (1).png" alt="">
+                    </div>
+                    <legend>Alterar Senha</legend>
+                    <div class="form_alert hide">
+                        <p>Alert</p>
+                    </div>
+                    <label for="senha_actual">Senha Actual <br>
+                        <input type="password" name="senha_actual" id="senha_actual" minlength="8" required autocomplete>
+                    </label><br>
+                    <label for="senha_nova">Senha Nova<br>
+                        <input type="password" name="senha_nova" id="senha_nova" minlength="8" required autocomplete>
+                    </label><br>
+                    <label for="confirma_senha_nova">Confirmar Senha Nova <br>
+                        <input type="password" name="confirma_senha_nova" id="confirma_senha_nova" minlength="8" required autocomplete>
+                    </label><br>
+                    
+                    <button id="submit_password" type="submit">Entrar</button> 
+                    <button type="reset">Limpar</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <div class="container">
+                <div id="logo_footer">
+                    <a href="index.html">
+                        <h1>
+                            <img width="55" src="../../public/assets/favicon/logo.png" alt="">DigiBook
+                        </h1>
+                    </a>
+                </div>
+                <div id="info_footer_container">
+                    <div class="foot_info">
+                        <h3>Morada:</h3>
+                        <p>Angola, Prov+incia de Luanda, bairro do Rangel CTT</p>
+                    </div>
+                    <div class="foot_info">
+                        <h3>Telemóvel:</h3>
+                        <p>937156016</p>
+                        <p>907156016</p>
+                    </div>
+                    <div class="foot_info">
+                        <h3>email:</h3>
+                        <p>digibook@gmail.com</p>
+                        <p>digibook@hotmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <p>© DigiBook - 2024</p>
+
+        </footer>    
+    </div>
+</body>
+</html>

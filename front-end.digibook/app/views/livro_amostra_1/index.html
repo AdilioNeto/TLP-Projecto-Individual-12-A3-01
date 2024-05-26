@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../public/css/style.css">
+    <link rel="shortcut icon" href="../../../public/assets/favicon/logo.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <script defer src="../../../public/js/main.js"></script>
+    <script defer src="../../../public/js/back_button.js"></script>
+
+    <title>Detalhes Do livro - Digibook</title>
+</head>
+<body>
+    <div id="filter">
+        <header>
+            <div id="logo"><a href="../index.html">
+                <img width="20" height="20" src="../../../public/assets/favicon/logo.png" alt="">Digibook</a>
+            </div>
+            <nav>
+                <ul type="none" id="menu">
+                    <li class="menu_li">
+                        <a href="../decima/index.html">10ª Classe</a>
+                        <div></div>
+                    </li>
+                    <li class="menu_li">
+                        <a href="../decima_1/index.html">11ª Classe</a>
+                        <div></div>
+                    </li>
+                    <li class="menu_li">
+                        <a href="../decima_2/index.html">12ª Classe</a>
+                        <div></div>
+                    </li>
+                    <div id="session_area">
+                        <div id="before">
+                            <li><a onclick="changeBackPageLocation('../index.html')" id="login" href="login/index.html">Login</a></li>
+                            <li><a onclick="changeBackPageLocation('../index.html')" id="cadastro" href="cadastro/index.html">Cadastro</a></li>
+                        </div>
+                        <div id="after">
+                            <p>A</p>
+                        </div>
+                    </div> 
+                </ul>
+            </nav>
+        </header>
+    
+        <main>
+            <section id="amostra_section">
+                <div class="container">
+                    <h1>Informática 10ª Classe</h1>
+                    <div class="amostra_livro">
+                        <img class="amostra_img" src="../../../public/assets/books/2.1.png" alt="">
+                        <br>
+                        <span>Editor:Porto Editora ... Informática - 10.ª Classe. de Artur Augusto Azul
+                            . ISBN:978-972-0-08005-9 ... Classificação Temática: Ensino > Livros Escolares.</span>
+                    </div>
+                </div>
+            </section>
+        </main>   
+    </div>
+
+    <style>
+        main{
+            width: 100%;
+            margin-top: -5px;
+            min-height: 1000px;
+            background: rgb(248, 246, 246);
+        }
+        span{
+            margin-top: 100px;
+        }
+    </style>
+</body>
+</html>

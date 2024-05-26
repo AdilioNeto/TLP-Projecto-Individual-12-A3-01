@@ -1,0 +1,77 @@
+.lib_row_prin{
+    display: flex;
+    margin-bottom: 20px;
+    gap: 40px;
+}
+
+.lib_row_prin  .lib_card:not(:last-child){
+    margin-right: 40px;
+}
+
+.lib_row_sec{
+    display: flex;
+    width: 50%;
+}
+
+.lib_card {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.lib_card div{
+    display: flex;
+    border: 1px solid rgb(224, 222, 222);
+}
+
+.lib_card .img_container{
+    padding: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 20px 40px;
+}
+
+.lib_card .img_container img{
+    width: 100%;
+    height: 18dvw;
+    border-left: 4px solid var(--logo_2);
+}
+
+.lib_card .alert{
+    background: white;
+    transition: 0.5s;
+    padding: 0;
+    height: 0;
+
+}
+
+.lib_card:hover .alert{
+
+    padding: 10px;
+    height: fit-content;
+    margin-top: -45px;
+
+}
+
+.lib_card:hover .alert button{
+    border: 2px solid var(--logo_color);
+    background: var(--book_subtitle);
+}
+
+.lib_card .alert button{
+    margin: 0 auto;
+    border: none;
+    background: none;
+    color: black;
+    transform: 0;
+    cursor: pointer;
+}
+
+.lib_card .subtitle{
+    height: 40px;
+    background: white;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    text-align: center !important;
+    padding: 10px;
+}
